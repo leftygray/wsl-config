@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Uses pdftk to remove first page from pdf documents
+# Useful for academic papers with journal info junk 
+# on front page
+
+
+pdftk "$1" cat 1-r2 output temp.pdf
+mv temp.pdf "$1"
+

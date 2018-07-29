@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Uses pdftk to burst a pdf document into single pages 
+pdftk "$1" burst

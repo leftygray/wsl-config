@@ -1,0 +1,15 @@
+""""""""""""""""
+" My Vim profile
+""""""""""""""""
+
+""""""""""""""""
+" Colours 
+""""""""""""""""
+
+" Enable syntax highlighting
+syntax enable
+
+" Colour scheme
+colorscheme koehler
+
+set background=dark
