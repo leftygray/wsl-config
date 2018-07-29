@@ -131,7 +131,7 @@ if [ $HOSTNAME = "lefty9000" ]; then
 	source ~/wsl-config/leftygray.bashrc
 fi
 
-if [ $HOSTNAME = "work" ]; then 
+if [ $HOSTNAME = "KI840G5W10-22" ]; then 
 	source ~/wsl-config/rgray.bashrc
 fi
 
