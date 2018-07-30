@@ -1,5 +1,3 @@
-
-
 ################################################################################
 # Local aliases for work computer
 #
@@ -17,6 +15,10 @@ alias cwa='cd /mnt/c/Users/rgray/Documents/Admin/'
 alias cwr='cd /mnt/c/Users/rgray/Documents/Research/'
 alias cwt='cd /mnt/c/Users/rgray/Documents/Teaching/'
 alias cws='cd /mnt/c/Users/rgray/Documents/Service/'
+alias cdrop='cd /mnt/c/Users/rgray/Dropbox/'
+alias codp='cd /mnt/c/Users/rgray/OneDrive\ -\ Personal/'
+alias codu='cd /mnt/c/Users/rgray/OneDrive\ -\ UNSW/'
+alias cunsw='cd /mnt/c/Users/rgray/UNSW/'
 
 wh=/mnt/c/Users/rgray/
 wd=/mnt/c/Users/rgray/Desktop/
@@ -26,6 +28,10 @@ wa=/mnt/c/Users/rgray/Documents/Admin/
 wr=/mnt/c/Users/rgray/Documents/Research/
 wt=/mnt/c/Users/rgray/Documents/Teaching/
 ws=/mnt/c/Users/rgray/Documents/Service/
+drop=/mnt/c/Users/rgray/Dropbox/
+odp=/mnt/c/Users/rgray/OneDrive\ -\ Personal/
+odu=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/
+unsw=/mnt/c/Users/rgray/UNSW/
 
 # Opening stuff and launching program aliases
 alias keepass='/mnt/c/Users/rgray/Dropbox/WindowsApps/KeePass/KeePass.exe'
