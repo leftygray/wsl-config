@@ -126,6 +126,10 @@ alias ga='git add'
 alias gc='git commit'
 alias gcm='git commit -m'
 
+# todo.txt aliases
+export TODOTXT_DEFAULT_ACTION=ls
+alias t='todo.sh'
+
 ###############################################################################
 # Local workstation specific aliases
 
