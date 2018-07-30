@@ -1,7 +1,13 @@
 # === EDIT FILE LOCATIONS BELOW ===
 
 # Your todo.txt directory (this should be an absolute path)
-export TODO_DIR="/mnt/c//Users/Richard/Dropbox/WindowsApps/todo.txt"
+if [ $HOSTNAME = "lefty9000" ]; then 
+	export TODO_DIR="/mnt/c/Users/Richard/Dropbox/WindowsApps/todo.txt"
+fi
+
+if [ $HOSTNAME = "KI840G5W10-22" ]; then 
+	export TODO_DIR="/mnt/c/Users/rgray/Dropbox/WindowsApps/todo.txt"
+fi
 #export TODO_DIR=$(dirname "$0")
 
 # Your todo/done/report.txt locations
