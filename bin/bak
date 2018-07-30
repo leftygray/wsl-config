@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Simple script to backup files to ~/backup using rsync. 
+# Mainly used for temporary storage and quick use.
+#
+# Todo: add options
+#	-l for local backup, i.e., backs up to local directory
+#       -d appends date+time to file to save version
+#       More than one file as input 
+#	Append "_bak"(?)
+#	Follow symbolic links to target (?)
+
+rsync -a $1 /home/leftygray/backup/
+echo "$1 backed up!"
