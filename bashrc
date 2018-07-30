@@ -129,6 +129,7 @@ alias gcm='git commit -m'
 # todo.txt aliases
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh'
+complete -F _todo t
 
 ###############################################################################
 # Local workstation specific aliases
