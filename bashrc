@@ -24,6 +24,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+alias rmspaces='rename "s/ /_/g" *' # Remnove spaces from file names in a directory
+
 # Default to human readable figures aliases
 alias df='df -h'
 alias du='du -h'
