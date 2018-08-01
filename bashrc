@@ -56,6 +56,8 @@ alias llt='ls -lArt' 				# List by last modified in reverse order
 
 # Directory aliases
 cdl() { cd "$@" && ls; }  # Change directory and list
+cdlink () { cd "$(dirname "$(readlink "$1")")"; } # Change to directory of traget file of symlink
+
 
 pushd()
 {
