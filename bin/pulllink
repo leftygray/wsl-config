@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# A little function to move a parent file or directory of a symbolic link back to the current folder and 
+# rm the symbolic link.
+# Usage: pulllink /some/symlink
+
+link="$1"
+target="$(readlink "$link")"
+
+rm -f "$link"
+
+mv -- "$target" "$(dirname "$link")"
+
+
+
+

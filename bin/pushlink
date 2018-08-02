@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# A little function to move a file or directory to another place and then leave behind a symbolic link.
+# Usage: pushlink /some/path/file another/path/
+# Got this from: https://unix.stackexchange.com/questions/228015/move-a-file-and-replace-it-by-a-symlink
+#
+
+original="$1"
+target="$2"
+
+if [ -f "$original" ]; then
+  if [ -d "$target" ]; then
+    target="$target/${original##*/}"
+  fi
+fi
+
+if [ -d "$original" ]; then
+  target="$target/$original"
+fi
+
+mv -- "$original" "$target"
+
+ln -s -- "$target" "${original%/*}"
+
+
