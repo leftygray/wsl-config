@@ -39,7 +39,10 @@ alias less='less -r'                          # raw control characters
 alias clr='clear'
 
 # Setup colours for directories (blue is too hard to read on black background)
-LS_COLORS=$LS_COLORS:'di=1;37:' ; export LS_COLORS
+# Note LS isn't classifying the directories as "di", but as "ow"
+# LS_COLORS=$LS_COLORS:'ow=1;44:fi=97' ; export LS_COLORS
+# Create and manipulate a ~/.dircolors file instead
+test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
 # Some aliases for different directory listings
 alias ls='ls -hF --color=tty'                 # classify files in colour
