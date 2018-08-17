@@ -134,6 +134,7 @@ alias gcm='git commit -m'
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh'
 complete -F _todo t
+alias tw='todo.sh ls @work'
 
 ###############################################################################
 # Local workstation specific aliases
