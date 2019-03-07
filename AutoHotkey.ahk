@@ -59,9 +59,10 @@ Capslock::Ctrl
 ; MY HOTSTRINGS
 
 ; Symbols
-::,em::{Asc 0151} ; em dash.
-::,en::{Asc 0150} ; en dash.
-::,md::{Asc 0183} ; Midline decimal
+::,em::{Asc 0151} ; Auto replace "--" with em dash. To actually create "--" type with a space and then delete space.
+::,en::{ASC 0150} ;  Auto replace "-*" with en dash
+::,hl::--- ; Put in three dashes for horizontal lines in markdown or in R script comments. 
+::,md::{Asc 0183} ; Add midline decimal point (required by some journals)
 
 ; Email addresses
 
@@ -105,10 +106,23 @@ Send {Space}{Asc 0151}{Space}
 FormatTime, CurrentDateTime,, d/MM/yyyy
 SendInput %CurrentDateTime%
 Return
+::,wdt::
+Send, Work
+Send {Space}{Asc 0151}{Space}
+FormatTime, CurrentDateTime,, dddd
+SendInput %CurrentDateTime%
+Send {Space}{Asc 0151}{Space}
+FormatTime, CurrentDateTime,, d/MM/yyyy
+SendInput %CurrentDateTime%
+Return
 
 ; Common folders/paths in windows
 
-; Funny emoticons
+
+; Common text
+::,wnb::
+Send ^bAdmin^b`r`r^bMeetings^b`r`r^bReading^b`r
+Return
 
 ; Canned responses for emails
 
@@ -142,8 +156,8 @@ On behalf of the Early Career Academic Network Executive Committee
 
 
 ; Temporary stuff
+::,ap::Annual spending (millions USD)
+::,pa::Proportion of acts protected
 
-::,te::risk condom non-use decrease by;
 
-
-
+; Funny emoticons
