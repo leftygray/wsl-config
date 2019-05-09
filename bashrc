@@ -132,8 +132,9 @@ alias gcm='git commit -m'
 
 # todo.txt aliases
 export TODOTXT_DEFAULT_ACTION=ls
-alias t='todo.sh -a'
+alias t='todo.sh -at'
 complete -F _todo t
+alias ta='todo.sh -at addto'
 alias tw='todo.sh ls @work'
 alias tcd='eval "$(todo.sh cd)"'
 alias tbec='todo.sh addto meetings.txt'
