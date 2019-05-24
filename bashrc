@@ -100,6 +100,7 @@ alias back='popd'
 alias flip='pushd_builtin'
 alias dirs='dirs -v'
 alias ds='dstack'
+alias dpop='builtin popd' # For manipulating the stack e.g. dpop -n +N
 
 # Disk usage aliases
 alias du='du -h'
