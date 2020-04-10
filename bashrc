@@ -152,6 +152,18 @@ fi
 if [ $HOSTNAME = "KI840G5W10-22" ]; then 
 	source ~/wsl-config/rgray.bashrc
 fi
+###############################################################################
+# dirpl Configuration
+
+#DIRP_LATEST_FILE="/tmp/dirp_latest"
+DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists"
+#DIRP_LIST_COLOR1='\e[0;33m'
+#DIRP_LIST_COLOR2='\e[0;36m'
+#DIRP_EXPERT=false
+#DIRP_USEALIASES_SUITE=true
+#DIRP_USEALIASES_DIRNUMS=true
+
+source ~/dirp/dirp.bash
 
 ###############################################################################
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
