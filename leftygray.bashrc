@@ -12,12 +12,15 @@ alias akal='cat ~/wsl-config/leftygray.bashrc | grep alias'
 alias cwh='cd /mnt/c/Users/Richard/'
 alias cwi='cd /mnt/c/Users/Richard/Desktop/Inbox/'
 alias cwd='cd /mnt/c/Users/Richard/Documents/'
-alias codu='cd /mnt/c/Users/Richard/UNSW/OneDrive\ -\ UNSW/'
+
+alias cwork='cd /mnt/c/Users/Richard/UNSW/OneDrive\ -\ UNSW/'
+alias cunsw='cd /mnt/c/Users/Richard/UNSW/UNSW/'
 
 wh=/mnt/c/Users/Richard/
 wi=/mnt/c/Users/Richard/Desktop/Inbox/
 wd=/mnt/c/Users/Richard/Documents/
-odu=/mnt/c/Users/Richard/UNSW/OneDrive\ -\ UNSW/
+work=/mnt/c/Users/Richard/UNSW/OneDrive\ -\ UNSW/
+unsw=/mnt/c/Richard/UNSW/UNSW/
 
 # Opening stuff and launching program aliases
 alias keepass='/mnt/c/Users/Richard/Dropbox/WindowsApps/KeePass/KeePass.exe'
