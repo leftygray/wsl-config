@@ -32,8 +32,8 @@ odu=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/
 unsw=/mnt/c/Users/rgray/UNSW/
 
 # Opening stuff and launching program aliases
-alias keepass='/mnt/c/Users/rgray/Dropbox/WindowsApps/KeePass/KeePass.exe'
-alias ruler='/mnt/c/Users/rgray/Dropbox/WindowsApps/Ruler.exe'
+alias keepass='/mnt/c/Users/rgray/OneDrive/WindowsApps/KeePass/KeePass.exe'
+alias ruler='/mnt/c/Users/rgray/OneDrive/WindowsApps/Ruler.exe'
 
 alias rstudio='/mnt/c/Program\ Files/RStudio/bin/rstudio.exe'
 alias matlab14='/mnt/c/Program\ Files/MATLAB/R2014a/bin/matlab.exe'
