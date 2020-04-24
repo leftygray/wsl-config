@@ -23,7 +23,7 @@ work=/mnt/c/Users/Richard/UNSW/OneDrive\ -\ UNSW/
 unsw=/mnt/c/Richard/UNSW/UNSW/
 
 # Opening stuff and launching program aliases
-alias keepass='/mnt/c/Users/Richard/Dropbox/WindowsApps/KeePass/KeePass.exe'
-alias ruler='/mnt/c/Users/Richard/Dropbox/WindowsApps/Ruler.exe'
+alias keepass='/mnt/c/Users/Richard/OneDrive/WindowsApps/KeePass/KeePass.exe'
+alias ruler='/mnt/c/Users/Richard/OneDrive/WindowsApps/Ruler.exe'
 
 
