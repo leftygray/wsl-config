@@ -157,7 +157,15 @@ fi
 # dirpl Configuration
 
 #DIRP_LATEST_FILE="/tmp/dirp_latest"
-DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists"
+#DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists"
+if [ $HOSTNAME = "lefty9000" ]; then
+    DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists/leftygray/"
+fi
+
+if [ $HOSTNAME = "KI840G5W10-22" ]; then
+    DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists/rgray/"
+
+fi
 #DIRP_LIST_COLOR1='\e[0;33m'
 #DIRP_LIST_COLOR2='\e[0;36m'
 #DIRP_EXPERT=false
