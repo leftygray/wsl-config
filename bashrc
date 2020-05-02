@@ -83,7 +83,7 @@ pushd_builtin()
 
 popd()
 {
-  builtin popd > /dev/null
+  builtin popd '+'$1 > /dev/null
   printf "DIRSTACK:\n"
   dirs -v
 }
