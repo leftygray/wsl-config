@@ -163,7 +163,7 @@ if [ $HOSTNAME = "lefty9000" ]; then
 fi
 
 if [ $HOSTNAME = "KI840G5W10-22" ]; then
-    DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists/rgray/"
+    DIRP_PROJECTS_DIR="/mnt/c/Users/rgray/OneDrive/dirp/dirlist/rgray/"
 
 fi
 #DIRP_LIST_COLOR1='\e[0;33m'
