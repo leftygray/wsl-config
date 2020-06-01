@@ -159,11 +159,11 @@ fi
 #DIRP_LATEST_FILE="/tmp/dirp_latest"
 #DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists"
 if [ $HOSTNAME = "lefty9000" ]; then
-    DIRP_PROJECTS_DIR="/mnt/c/Users/Richard/OneDrive/dirp/dirlists/leftygray/"
+    DIRP_PROJECTS_DIR="$HOME/dirlists/leftygray/"
 fi
 
 if [ $HOSTNAME = "KI840G5W10-22" ]; then
-    DIRP_PROJECTS_DIR="/mnt/c/Users/rgray/OneDrive/dirp/dirlists/rgray/"
+    DIRP_PROJECTS_DIR="$HOME/dirlists/rgray/"
 
 fi
 #DIRP_LIST_COLOR1='\e[0;33m'
