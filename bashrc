@@ -138,10 +138,12 @@ complete -F _todo t
 alias ta='todo.sh -at add'
 alias tat='todo.sh -a addto'
 alias tw='todo.sh ls @work'
+alias th='todo.sh ls @home'
 alias tcd='eval "$(todo.sh cd)"'
 alias tmeet='todo.sh addto meetings.txt'
 alias ct='clear; todo.sh'
 alias ctw='clear; todo.sh ls @work'
+alias cth='clear; todo.sh ls @home'
 
 ###############################################################################
 # Local workstation specific aliases
