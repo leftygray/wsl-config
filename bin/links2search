@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# A little function to search Google using the links2 browser
+# Usage: links2search /some/searchterm
+
+links2 "http://www.google.com/search?q=$1"
