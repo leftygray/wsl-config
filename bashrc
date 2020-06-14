@@ -145,6 +145,8 @@ alias tmeet='todo.sh addto meetings.txt'
 alias ct='clear; todo.sh'
 alias ctw='clear; todo.sh ls @work'
 alias cth='clear; todo.sh ls @home'
+alias tnow='todo.sh setdue today'
+alias tsd='todo.sh setdue'
 
 ###############################################################################
 # Local workstation specific aliases
