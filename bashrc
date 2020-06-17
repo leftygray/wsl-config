@@ -16,6 +16,8 @@
 # application.  To override the alias instruction use a \ before, ie
 # \rm will call the real rm not the alias.
 
+preexec() { clear;}
+
 # List all my aliases
 alias aka='cat ~/.bashrc | grep alias'
 
@@ -261,3 +263,10 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 # Setup Display for Xming
 export DISPLAY=:0
+
+###################################################################################
+# preexec set-up
+# Pull down our file from GitHub and write it to our home directory as a hidden file.
+#curl https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o ~/wsl-config/bib/bash-preexec.sh
+# Source our file at the end of our bash profile (e.g. ~/.bashrc, ~/.profile, or ~/.bash_profile)
+[[ -f ~/wsl-config/bin/bash-preexec.sh ]] && source ~/wsl-config/bin/bash-preexec.sh
