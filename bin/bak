@@ -10,5 +10,5 @@
 #	Append "_bak"(?)
 #	Follow symbolic links to target (?)
 
-rsync -a $1 /home/leftygray/backup/
+rsync -a $1 ~/backup/
 echo "$1 backed up!"

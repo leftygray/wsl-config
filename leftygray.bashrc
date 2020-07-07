@@ -8,6 +8,10 @@
 # List all my local aliases
 alias akal='cat ~/wsl-config/leftygray.bashrc | grep alias'
 
+# Managing inbox files
+alias lsib='ls /mnt/c/Users/Richard/OneDrive\ -\ UNSW/Inbox/'
+alias ltib='ls -rt /mnt/c/Users/Richard/OneDrive\ -\ UNSW/Inbox/'
+
 # Favorite directory aliases
 alias cwh='cd /mnt/c/Users/Richard/'
 alias cwi='cd /mnt/c/Users/Richard/Desktop/Inbox/'

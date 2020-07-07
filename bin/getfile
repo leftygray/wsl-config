@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# A little function to get a file into the current directory
+
+mv $1 ./
+echo "Moved $1 into pwd..."

@@ -18,6 +18,8 @@
 
 preexec() { clear;}
 
+# getfile() { mv $1 ./;}
+
 # List all my aliases
 alias aka='cat ~/.bashrc | grep alias'
 
@@ -26,7 +28,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias rmspaces='rename "s/ /_/g" *' # Remnove spaces from file names in a directory
+alias rmdirspaces='rename "s/ /_/g" *' # Remove spaces from file names in a directory. For individual file use rmfilespaces in ~/wsl-cnfig/bin
 
 # Default to human readable figures aliases
 alias df='df -h'
