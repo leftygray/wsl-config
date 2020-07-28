@@ -3,11 +3,11 @@
 # A little script to retrieve a file from $wh/Documents/Inbox. 
 
 if [ $HOSTNAME = "lefty9000" ]; then 
-	mv /mnt/c/Users/Richard/OneDrive\ -\ UNSW/Inbox/$1 ./
+	mv /mnt/c/Users/Richard/OneDrive\ -\ UNSW/Inbox/"$1" ./
 fi
 
 if [ $HOSTNAME = "KI840G5W10-22" ]; then 
-	mv /mnt/c/Users/rgray/OneDrive\ -\ UNSW/Inbox/$1 ./
+	mv /mnt/c/Users/rgray/OneDrive\ -\ UNSW/Inbox/"$1" ./
 fi
 
 echo "File $1 from Inbox retrieved..."
