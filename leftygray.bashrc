@@ -1,5 +1,3 @@
-
-
 ################################################################################
 # Local aliases for personal computer
 #
@@ -30,4 +28,7 @@ unsw=/mnt/c/Richard/UNSW/UNSW/
 alias keepass='/mnt/c/Users/Richard/OneDrive/WindowsApps/KeePass/KeePass.exe'
 alias ruler='/mnt/c/Users/Richard/OneDrive/WindowsApps/Ruler.exe'
 
+# Local todo aliases
+alias tlproj='cat /mnt/c/Users/Richard/OneDrive/todo.txt/readme.txt | grep "* +"'
+alias tlcon='cat /mnt/c/Users/Richard/OneDrive/todo.txt/readme.txt | grep "* @"'
 

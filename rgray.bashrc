@@ -43,3 +43,7 @@ alias rstudio='/mnt/c/Program\ Files/RStudio/bin/rstudio.exe'
 alias matlab14='/mnt/c/Program\ Files/MATLAB/R2014a/bin/matlab.exe'
 alias matlab18='/mnt/c/Program\ Files/MATLAB/R2018a/bin/matlab.exe'
 alias spyder='/mnt/c/Users/rgray/AppData/Local/Continuum/anaconda2/pythonw.exe'
+
+# Local todo aliases
+alias tlproj='cat /mnt/c/Users/rgray/OneDrive/todo.txt/readme.txt | grep "* +"'
+alias tlcon='cat /mnt/c/Users/rgray/OneDrive/todo.txt/readme.txt | grep "* @"'
