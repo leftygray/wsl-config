@@ -1,6 +1,7 @@
 [user]
 	name = leftygray
 	email = leftygray@gmail.com
+	signingkey = D3642B99271C4C6D
 [color]
 	ui = auto
 
@@ -20,3 +21,5 @@ lg3 = !"git lg3-specific --all"
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
