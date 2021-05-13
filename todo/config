@@ -2,7 +2,7 @@
 
 # Your todo.txt directory (this should be an absolute path)
 if [ $HOSTNAME = "lefty9000" ]; then 
-	export TODO_DIR="/mnt/c/Users/Richard/OneDrive/todo.txt"
+	export TODO_DIR="/mnt/c/Users/lefty/OneDrive/todo.txt"
 fi
 
 if [ $HOSTNAME = "KI840G5W10-22" ]; then 
