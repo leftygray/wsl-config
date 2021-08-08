@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Uses pdftk to remove first page from pdf documents
+# Uses pdftk to remove last page from pdf documents
 # Useful for academic papers with journal info junk 
-# on front page
+# on last page
 
 
 pdftk "$1" cat 1-r2 output temp.pdf
