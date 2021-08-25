@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Displays the context and project categories in a nice format from
+# the todo readme.txt file
+
+# Local workstation specific file
+if [ $HOSTNAME = "lefty9000" ]; then
+    file=/mnt/c/Users/lefty/OneDrive/todo.txt/readme.txt
+fi
+
+if [ $HOSTNAME = "KI840G5W10-22" ]; then
+    file=/mnt/c/Users/rgray/OneDrive/todo.txt/readme.txt
+fi
+
+
+a=$(awk '/_Home actions_/ {print NR}' $file)
+b=$(awk '/### Other files/ {print NR}' $file)
+sed -n "$a , $b p" "$file"
