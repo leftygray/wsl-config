@@ -182,7 +182,7 @@ fi
 #DIRP_USEALIASES_DIRNUMS=true
 
 source ~/dirp/dirp.bash
-source ~/bin/dp.bash
+source ~/bin/leftydirp.bash
 #alias dp='dirpp' # Replaced by a script
 
 ###############################################################################

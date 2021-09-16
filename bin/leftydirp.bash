@@ -6,6 +6,7 @@
 dp() {
 	if [ -z "$1" ]; then
 		dirpp
+		clear
 	else
 		projects=($(ls $DIRP_PROJECTS_DIR))
 		project=${projects["$1"-1]}
