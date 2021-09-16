@@ -13,3 +13,5 @@ syntax enable
 colorscheme koehler
 
 set background=dark
+
+set tabstop=4
