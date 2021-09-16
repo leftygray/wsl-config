@@ -182,8 +182,8 @@ fi
 #DIRP_USEALIASES_DIRNUMS=true
 
 source ~/dirp/dirp.bash
-
-alias dp='dirpp'
+source ~/bin/dp.bash
+#alias dp='dirpp' # Replaced by a script
 
 ###############################################################################
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
