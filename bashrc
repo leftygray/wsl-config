@@ -165,7 +165,7 @@ fi
 
 ###############################################################################
 # Source functions that use local variables 
-source ~/bin/leftyfiles.bash
+source ~/bin/mvfiles.bash
 
 ###############################################################################
 # dirp
