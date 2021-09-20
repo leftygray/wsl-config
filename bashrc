@@ -153,7 +153,7 @@ alias tnow='todo.sh setdue today'
 alias tsd='todo.sh setdue'
 
 ###############################################################################
-# Local workstation specific aliases
+# Local workstation specific variables and aliases
 
 if [ $HOSTNAME = "lefty9000" ]; then 
 	source ~/wsl-config/leftygray.bashrc
@@ -162,19 +162,24 @@ fi
 if [ $HOSTNAME = "KI840G5W10-22" ]; then 
 	source ~/wsl-config/rgray.bashrc
 fi
+
 ###############################################################################
-# dirp Configuration
+# Source functions that use local variables 
+source ~/bin/leftyfiles.bash
+
+###############################################################################
+# dirp
 
 #DIRP_LATEST_FILE="/tmp/dirp_latest"
 #DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists"
-if [ $HOSTNAME = "lefty9000" ]; then
-    DIRP_PROJECTS_DIR="$HOME/dirlists/leftygray/"
-fi
+#if [ $HOSTNAME = "lefty9000" ]; then
+#    DIRP_PROJECTS_DIR="$HOME/dirlists/leftygray/"
+#fi
 
-if [ $HOSTNAME = "KI840G5W10-22" ]; then
-    DIRP_PROJECTS_DIR="$HOME/dirlists/rgray/"
+#if [ $HOSTNAME = "KI840G5W10-22" ]; then
+#    DIRP_PROJECTS_DIR="$HOME/dirlists/rgray/"
 
-fi
+#fi
 #DIRP_LIST_COLOR1='\e[0;33m'
 #DIRP_LIST_COLOR2='\e[0;36m'
 #DIRP_EXPERT=false
@@ -261,7 +266,6 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
 # export PS1="$Red \u $Green\$(__git_ps1)$Yellow \W $ $Color_Off"
-################################################################################
 
 # Setup Display for Xming
 export DISPLAY=:0
@@ -272,3 +276,5 @@ export DISPLAY=:0
 #curl https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o ~/wsl-config/bib/bash-preexec.sh
 # Source our file at the end of our bash profile (e.g. ~/.bashrc, ~/.profile, or ~/.bash_profile)
 [[ -f ~/wsl-config/bin/bash-preexec.sh ]] && source ~/wsl-config/bin/bash-preexec.sh
+
+
