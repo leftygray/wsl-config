@@ -15,14 +15,14 @@ alias cwh='cd /mnt/c/Users/lefty/'
 alias cwi='cd /mnt/c/Users/lefty/Desktop/Inbox/'
 alias cwd='cd /mnt/c/Users/lefty/Documents/'
 
-alias cwork='cd /mnt/c/Users/lefty/UNSW/OneDrive\ -\ UNSW/'
-alias cunsw='cd /mnt/c/Users/lefty/UNSW/UNSW/'
+alias cwork='cd /mnt/c/Users/lefty/OneDrive\ -\ UNSW/'
+alias cunsw='cd /mnt/c/Users/lefty/UNSW/'
 
 wh=/mnt/c/Users/lefty/
 wi=/mnt/c/Users/lefty/Desktop/Inbox/
 wd=/mnt/c/Users/lefty/Documents/
-work=/mnt/c/Users/lefty/UNSW/OneDrive\ -\ UNSW/
-unsw=/mnt/c/lefty/UNSW/UNSW/
+work=/mnt/c/Users/lefty/OneDrive\ -\ UNSW/
+unsw=/mnt/c/lefty/UNSW/
 
 # Opening stuff and launching program aliases
 alias keepass='/mnt/c/Users/lefty/OneDrive/WindowsApps/KeePass/KeePass.exe'
