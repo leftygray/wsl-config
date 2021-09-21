@@ -25,8 +25,8 @@ alias cunsw='cd /mnt/c/Users/rgray/UNSW/'
 
 wh=/mnt/c/Users/rgray/
 wd=/mnt/c/Users/rgray/Desktop/
-wi=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Inbox/
-wa=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Admin/
+wi=/mnt/c/Users/rgray/OneDrive\ - \UNSW/Inbox/
+wa=/mnt/c/Users/rgray/OneDrive\ - \UNSW/Admin/
 wr=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Research/
 wt=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Teaching/
 ws=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Service/
