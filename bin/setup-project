@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Simple script to set-up template project directories and files. Used for work whne
+# starting a modelling project. 
+
+echo "Setting up project..."
+
+mkdir ./admin
+mkdir ./code
+mkdir ./data
+mkdir ./docs
+mkdir ./misc
+mkdir ./output
+mkdir ./projects
+
+touch ./README.md
+touch ./project_notes.md
+touch ./Project_Document.docx
+touch ./Project_Materials.pptx
+
+ls -1hF --color=tty
