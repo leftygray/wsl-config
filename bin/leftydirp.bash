@@ -42,7 +42,7 @@ dpu() {
 	#echo $dir
 	#dirpu $dir
 	#cd .
-	eval echo ~$1 >> ~/dirlists/rgray/"$2"
+	eval echo ~$1 >> $DIRP_PROJECTS_DIR"$2"
 	
 	echo "Directory $1 moved to project $2..."
 	

@@ -49,7 +49,7 @@ alias clr='clear'
 test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
 # Some aliases for different directory listings
-alias ls='ls -hF --color=tty'                 # classify files in colour
+alias ls='ls -1hF --color=tty'                 # classify files in colour
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias ll='ls -laF'                              # long list
