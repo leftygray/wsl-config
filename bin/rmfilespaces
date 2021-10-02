@@ -1,5 +1,0 @@
-#!/bin/bash
-# Little function to remove spaces from a filename
-
-rename "s/ /_/g" "$1"
-echo "Spaces in filename removed..."  
