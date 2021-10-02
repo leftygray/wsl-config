@@ -170,6 +170,11 @@ alias libweek='find "$wi" -maxdepth 1 -mtime -7 -type f -printf "%f\n"'
 alias libmonth='find "$wi" -maxdepth 1 -mtime -31 -type f -printf "%f\n"'
 
 ###############################################################################
+# Source personal functions
+source ~/bin/renamefunctions.bash
+source ~/bin/pdfchange.bash
+
+###############################################################################
 # Source functions that use local variables 
 source ~/bin/mvfiles.bash
 
