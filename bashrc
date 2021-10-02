@@ -37,7 +37,7 @@ alias du='du -h'
 # Misc aliases :)
 alias less='less -r'                          # raw control characters
 # alias whence='type -a'                        # where, of a sort
-#alias grep='grep --color'                     # show differences in colour
+alias grep='grep --color'                     # show differences in colour
 # alias egrep='egrep --color=auto'              # show differences in colour
 # alias fgrep='fgrep --color=auto'              # show differences in colour
 alias clr='clear'
@@ -163,28 +163,18 @@ if [ $HOSTNAME = "KI840G5W10-22" ]; then
 	source ~/wsl-config/rgray.bashrc
 fi
 
+# Aliases using local variables
+alias lsib='ls "$wi"'
+alias ltib='ls -rt "$wi"'
+alias libweek='find "$wi" -maxdepth 1 -mtime -7 -type f -printf "%f\n"'
+alias libmonth='find "$wi" -maxdepth 1 -mtime -31 -type f -printf "%f\n"'
+
 ###############################################################################
 # Source functions that use local variables 
 source ~/bin/mvfiles.bash
 
 ###############################################################################
 # dirp
-
-#DIRP_LATEST_FILE="/tmp/dirp_latest"
-#DIRP_PROJECTS_DIR="$HOME/wsl-config/dirlists"
-#if [ $HOSTNAME = "lefty9000" ]; then
-#    DIRP_PROJECTS_DIR="$HOME/dirlists/leftygray/"
-#fi
-
-#if [ $HOSTNAME = "KI840G5W10-22" ]; then
-#    DIRP_PROJECTS_DIR="$HOME/dirlists/rgray/"
-
-#fi
-#DIRP_LIST_COLOR1='\e[0;33m'
-#DIRP_LIST_COLOR2='\e[0;36m'
-#DIRP_EXPERT=false
-#DIRP_USEALIASES_SUITE=true
-#DIRP_USEALIASES_DIRNUMS=true
 
 source ~/dirp/dirp.bash
 source ~/bin/leftydirp.bash
