@@ -12,10 +12,13 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
+"https://github.com/VundleVim/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
+
+" Keep Plugin commands between vundle#begin/end.
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -23,10 +26,17 @@ Plugin 'VundleVim/Vundle.vim'
 " gruvbox colorscheme
 Plugin 'morhetz/gruvbox'
 
+" A collection of language packs for Vim (seems to produce errors).
+" Plugin 'sheerun/vim-polyglot'
+
+" vim-airline for a nice status bar
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -56,17 +66,39 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 """""""""""""""
-" Editing stuff
+" General stuff
 """""""""""""""
 
-set tabstop=4
+" Enable syntax highlighting
+syntax on
+
+set noerrorbells "This removes vim's default error bell
+set textwidth=80 "Ensures that ech line is < 80 columns 
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
 set mouse=a
+set spell spelllang=en_au
+set smartindent
+set autoindent
+set number
+set wrap
+set linebreak
+set showmatch
+set showbreak=+++
+set smartcase
+set incsearch
+set confirm
+set ruler
+set autochdir
+set backspace=indent,eol,start
+
+
 
 """""""""
 " Colours 
 """""""""
 
-"Set-up OneDarkVim"
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -82,9 +114,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-
-" Enable syntax highlighting
-syntax enable
 
 colorscheme gruvbox
 "colorscheme onedarkvim
