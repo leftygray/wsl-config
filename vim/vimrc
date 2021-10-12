@@ -82,18 +82,30 @@ set spell spelllang=en_au
 set smartindent
 set autoindent
 set number
-set wrap
-set linebreak
+set relativenumber
 set showmatch
 set showbreak=+++
 set smartcase
 set incsearch
+set hlsearch
 set confirm
 set ruler
 set autochdir
 set backspace=indent,eol,start
+set titlestring=%t
 
+set wrap
+set scrolloff=1
+set linebreak
+set sidescrolloff=5
 
+set undolevels=1000
+set history=1000
+set backupdir=~/.vim/cache
+set dir=~/.vim/cache
+
+nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
+nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
 """""""""
 " Colours 
