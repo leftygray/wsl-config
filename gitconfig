@@ -21,10 +21,8 @@ lg3 = !"git lg3-specific --all"
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[credential]
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 [credential]
-	helper = 
 	helper = /usr/bin/git-credential-manager-core
 	credentialStore = cache
