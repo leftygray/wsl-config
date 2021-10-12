@@ -2,8 +2,7 @@
 
 # Script to copy my .vimrc to _vimrc in for windows gvim to use
 
-file=/mnt/c/Users/rgray/_vimrc
-
+file="$wh"/_vimrc
 
 cp ~/.vimrc "$file"
 
