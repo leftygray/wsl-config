@@ -24,5 +24,5 @@ lg3 = !"git lg3-specific --all"
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 [credential]
-	helper = /usr/bin/git-credential-manager-core
 	credentialStore = cache
+	helper = /usr/bin/git-credential-manager-core
