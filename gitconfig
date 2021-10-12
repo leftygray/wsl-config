@@ -1,13 +1,12 @@
 [user]
 	name = leftygray
 	email = leftygray@gmail.com
-	signingkey = D3642B99271C4C6D
 [color]
 	ui = auto
 
 [core]
 	editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -n -w/
-	autocrlf = true
+	autocrlf = input
 [alias]
 lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
@@ -22,4 +21,9 @@ lg3 = !"git lg3-specific --all"
 	smudge = git-lfs smudge %f
 	required = true
 [credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential]
+	helper = 
+	helper = /usr/bin/git-credential-manager-core
+	credentialStore = cache
