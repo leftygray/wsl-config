@@ -1,6 +1,7 @@
 [user]
 	name = leftygray
 	email = leftygray@gmail.com
+	signingkey = D3642B99271C4C6D
 [color]
 	ui = auto
 
