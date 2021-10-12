@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Script to copy my .vimrc to _vimrc in for windows gvim to use
+
+file=/mnt/c/Users/rgray/_vimrc
+
+
+cp ~/.vimrc "$file"
+
+# To the .vimrc file append specific windows settings
+sed -i '1i set shellslash' "$file" 
+sed -i '1i set guifont=Ubuntu_Mono:h10:cANSI' "$file"
+
+# Replace .vim with vimfiles
+sed -i 's/\/.vim\//\/vimfiles\//g' "$file"
+
+# Create _gvimrc as well
+# cp  /mnt/c/Users/rgray/_vimrc /mnt/c/Users/rgray/_gvimrc
+
+
