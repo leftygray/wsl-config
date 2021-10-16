@@ -25,7 +25,8 @@ work=/mnt/c/Users/lefty/OneDrive\ -\ UNSW/
 unsw=/mnt/c/lefty/UNSW/
 
 # Opening stuff and launching program aliases
-alias keepass='/mnt/c/Users/lefty/OneDrive/WindowsApps/KeePass/KeePass.exe'
+# alias keepass='/mnt/c/Users/lefty/OneDrive/WindowsApps/KeePass/KeePass.exe'
+alias keepass='/mnt/c/Users/lefty/OneDrive/WindowsApps/KeePass/KeePass-2.49/KeePass.exe'
 alias ruler='/mnt/c/Users/lefty/OneDrive/WindowsApps/Ruler.exe'
 
 # Local todo aliases
