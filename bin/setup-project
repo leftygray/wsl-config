@@ -18,4 +18,6 @@ touch ./project_notes.md
 touch ./Project_Document.docx
 touch ./Project_Materials.pptx
 
+cp ~/wsl-config/gitattributes ./.gitattributes
+
 ls -1hF --color=tty
