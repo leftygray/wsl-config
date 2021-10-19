@@ -19,5 +19,6 @@ touch ./Project_Document.docx
 touch ./Project_Materials.pptx
 
 cp ~/wsl-config/gitattributes ./.gitattributes
+cp ~/wsl-config/gitignore ./.gitignore
 
 ls -1hF --color=tty
