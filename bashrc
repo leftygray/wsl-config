@@ -116,8 +116,9 @@ shopt -s direxpand
 
 alias ex='cmd.exe /c start .' #'star t.'   #Open explorer in current directory
 alias o='cmd.exe /c start'
-alias edit='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
+#alias edit='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
 #alias pdftk='/c/Program\ Files\ \(x86\)/PDFtk\ Server/bin/pdftk.exe'
+alias edit='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
 
 # Key bindings, up/down arrow searches through history
 bind '"\e[A": history-search-backward'
