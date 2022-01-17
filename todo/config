@@ -5,7 +5,7 @@ if [ $HOSTNAME = "lefty9000" ]; then
 	export TODO_DIR="/mnt/c/Users/lefty/OneDrive/todo.txt"
 fi
 
-if [ $HOSTNAME = "KI840G5W10-22" ]; then 
+if [ $HOSTNAME = "KIDL9520-5" ]; then 
 	export TODO_DIR="/mnt/c/Users/rgray/OneDrive/todo.txt"
 fi
 #export TODO_DIR=$(dirname "$0")
