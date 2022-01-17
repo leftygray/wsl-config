@@ -160,7 +160,7 @@ if [ $HOSTNAME = "lefty9000" ]; then
 	source ~/wsl-config/leftygray.bashrc
 fi
 
-if [ $HOSTNAME = "KI840G5W10-22" ]; then 
+if [ $HOSTNAME = "KIDL9520-5" ]; then 
 	source ~/wsl-config/rgray.bashrc
 fi
 
