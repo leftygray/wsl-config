@@ -8,7 +8,7 @@ if [ $HOSTNAME = "lefty9000" ]; then
     file=/mnt/c/Users/lefty/OneDrive/todo.txt/readme.txt
 fi
 
-if [ $HOSTNAME = "KI840G5W10-22" ]; then
+if [ $HOSTNAME = "KIDL9520-5" ]; then
     file=/mnt/c/Users/rgray/OneDrive/todo.txt/readme.txt
 fi
 
