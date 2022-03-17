@@ -37,6 +37,10 @@ Plugin 'vim-airline/vim-airline-themes'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 
+" Quarto plugins 
+Plugin 'vim-pandoc/vim-pandoc-sytnax'
+Plugin 'quarto-dev/quarto-vim'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
