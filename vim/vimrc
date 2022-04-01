@@ -77,6 +77,8 @@ filetype plugin indent on    " required
 syntax on
 
 set noerrorbells "This removes vim's default error bell
+set vb t_vb=
+set belloff=all "Tunr off all bells"
 set textwidth=80 "Ensures that ech line is < 80 columns 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
