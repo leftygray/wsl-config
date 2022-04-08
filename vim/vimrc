@@ -2,8 +2,6 @@
 " My Vim profile
 """"""""""""""""
 
-
-
 """"""""""""""""""""""""""""
 " Plugin set-up using Vundle
 """"""""""""""""""""""""""""
@@ -25,6 +23,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " gruvbox colorscheme
 Plugin 'morhetz/gruvbox'
+
+" Dracula colourscheme
+Plugin 'dracula/vim', { 'name': 'dracula' }
 
 " A collection of language packs for Vim (seems to produce errors).
 " Plugin 'sheerun/vim-polyglot'
@@ -133,7 +134,8 @@ if (empty($TMUX))
   endif
 endif
 
-colorscheme gruvbox
+colorscheme dracula
+"colorscheme gruvbox
 "colorscheme onedarkvim
 "colorscheme koehler
 
