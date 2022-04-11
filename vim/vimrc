@@ -6,7 +6,7 @@
 " Plugin set-up using Vundle
 """"""""""""""""""""""""""""
 
-set nocompatible              " be iMproved, required
+set nocompatible              " be improved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -79,7 +79,7 @@ syntax on
 
 set noerrorbells "This removes vim's default error bell
 set vb t_vb=
-set belloff=all "Tunr off all bells"
+set belloff=all "Turn off all bells"
 set textwidth=80 "Ensures that ech line is < 80 columns 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -113,6 +113,13 @@ set dir=~/.vim/cache
 
 nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
+
+if system('uname -r') =~ "Microsoft"
+    augroup Yank
+        autocmd!
+        autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+        augroup END
+endif
 
 """""""""
 " Colours 

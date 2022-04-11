@@ -2,7 +2,16 @@
 
 # Script to copy my .vimrc to _vimrc in for windows gvim to use
 
-file="$wh"/_vimrc
+# Local workstation specific file
+if [ $HOSTNAME = "lefty9000" ]; then 
+    file=/mnt/c/Users/lefty/_vimrc
+fi
+
+if [ $HOSTNAME = "KIDL9520-5" ]; then 
+    file=/mnt/c/Users/rgray/_vimrc
+fi
+
+#file="$wh"/_vimrc
 
 cp ~/.vimrc "$file"
 
