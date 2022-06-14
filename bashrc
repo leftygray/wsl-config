@@ -143,6 +143,7 @@ complete -F _todo t
 alias ta='todo.sh -at add'
 alias tat='todo.sh -a addto'
 alias tw='todo.sh ls @work'
+alias twp='todo.sh lsp @work'
 alias th='todo.sh ls @home'
 alias tcd='eval "$(todo.sh cd)"'
 alias tls='todo.sh listfiles'
@@ -152,6 +153,7 @@ alias ctw='clear; todo.sh ls @work'
 alias cth='clear; todo.sh ls @home'
 alias tnow='todo.sh setdue today'
 alias tsd='todo.sh setdue'
+alias tweek='todo.sh due 7'
 
 ###############################################################################
 # Local workstation specific variables and aliases
