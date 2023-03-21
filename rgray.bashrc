@@ -19,7 +19,7 @@ alias cwr='cd /mnt/c/Users/rgray/OneDrive\ -\ UNSW/Research/'
 alias cwt='cd /mnt/c/Users/rgray/OneDrive\ -\ UNSW/Teaching/'
 alias cws='cd /mnt/c/Users/rgray/OneDrive\ -\ UNSW/Service/'
 alias cdrop='cd /mnt/c/Users/rgray/Dropbox/'
-alias codp='cd /mnt/c/Users/rgray/OneDrive\ -\ Personal/'
+alias codp='cd /mnt/c/Users/rgray/OneDrive/'
 alias codu='cd /mnt/c/Users/rgray/OneDrive\ -\ UNSW/'
 alias cunsw='cd /mnt/c/Users/rgray/UNSW/'
 
@@ -31,7 +31,7 @@ wr=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Research/
 wt=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Teaching/
 ws=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Service/
 drop=/mnt/c/Users/rgray/Dropbox/
-odp=/mnt/c/Users/rgray/OneDrive\ -\ Personal/
+odp=/mnt/c/Users/rgray/OneDrive/
 odu=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/
 unsw=/mnt/c/Users/rgray/UNSW/
 
