@@ -42,6 +42,9 @@ alias grep='grep --color'                     # show differences in colour
 # alias fgrep='fgrep --color=auto'              # show differences in colour
 alias clr='clear'
 
+# Convert all files in a directory from CRLF (dos) to LF (unix) for use in wsl
+alias d2u = 'find . -type f -print0 | xargs -0 dos2unix'
+
 # Setup colours for directories (blue is too hard to read on black background)
 # Note LS isn't classifying the directories as "di", but as "ow"
 # LS_COLORS=$LS_COLORS:'ow=1;44:fi=97' ; export LS_COLORS
@@ -119,6 +122,7 @@ alias o='cmd.exe /c start'
 #alias edit='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
 #alias pdftk='/c/Program\ Files\ \(x86\)/PDFtk\ Server/bin/pdftk.exe'
 alias edit='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
+alias gvim='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
 
 # Key bindings, up/down arrow searches through history
 bind '"\e[A": history-search-backward'
