@@ -26,4 +26,4 @@ lg3 = !"git lg3-specific --all"
 [credential]
 	credentialStore = cache
     helper = store
-    helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+# helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
