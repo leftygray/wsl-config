@@ -5,7 +5,7 @@
 #
 
 glf() {
-	# A little function to retrieve the last modified file in $wi/Documents/Inbox. 
+	# A little function to retrieve the last modified file in $wi/. 
 	# echo "$wi"
 	find "$wi" -maxdepth 1 -type f -printf "%T@ %p\n" | sort -n | cut -d' ' -f 2- | tail -n 1 | xargs -0 -d "\n" -I {} mv {} ./
 
@@ -15,7 +15,7 @@ glf() {
 
 
 gfib() {
-	# A little function to retrieve a file from $wh/Documents/Inbox. 
+	# A little function to retrieve a file from $wi/. 
 
 	mv "$wi"/"$1" ./
 
@@ -24,7 +24,7 @@ gfib() {
 
 
 getfile() {
-	# A little function to get a file into the current directory
+	# A little function to get a path/file into the current directory
 
 	mv "$1" ./
 	echo "Moved $1 into pwd..."
