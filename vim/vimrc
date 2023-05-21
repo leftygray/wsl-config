@@ -4,9 +4,9 @@
 
 " In case Vundle install doesn't work for dracula colourscheme
 " https://draculatheme.com/vim
-packadd! dracula
-syntax enable
-colorscheme dracula
+"packadd! dracula
+"syntax enable
+"colorscheme dracula
 
 """"""""""""""""""""""""""""
 " Plugin set-up using Vundle
