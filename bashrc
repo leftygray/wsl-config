@@ -176,6 +176,9 @@ alias ltib='ls -rt "$wi"'
 alias libweek='find "$wi" -maxdepth 1 -mtime -7 -type f -printf "%f\n"'
 alias libmonth='find "$wi" -maxdepth 1 -mtime -31 -type f -printf "%f\n"'
 
+alias lsdl='ls "$wdl"'
+alias ltdl='ls -rt "$wdl"'
+
 ###############################################################################
 # Source personal functions
 source ~/bin/renamefunctions.bash

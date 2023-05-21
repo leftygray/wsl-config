@@ -13,14 +13,15 @@ alias akal='cat ~/wsl-config/leftygray.bashrc | grep alias'
 # Favorite directory aliases
 alias cwh='cd /mnt/c/Users/lefty/'
 alias cwi='cd /mnt/c/Users/lefty/Desktop/Inbox/'
-alias cwd='cd /mnt/c/Users/lefty/Documents/'
-
+alias cwdoc='cd /mnt/c/Users/lefty/Documents/'
+alias cwdl='cd /mnt/c/Users/lefty/Downloads/'
 alias cwork='cd /mnt/c/Users/lefty/OneDrive\ -\ UNSW/'
 alias cunsw='cd /mnt/c/Users/lefty/UNSW/'
 
 wh=/mnt/c/Users/lefty/
 wi=/mnt/c/Users/lefty/Desktop/Inbox/
-wd=/mnt/c/Users/lefty/Documents/
+wdoc=/mnt/c/Users/lefty/Documents/
+wdl=/mnt/c/Users/lefty/Downloads/
 work=/mnt/c/Users/lefty/OneDrive\ -\ UNSW/
 unsw=/mnt/c/lefty/UNSW/
 
@@ -35,4 +36,3 @@ alias tlcon='cat /mnt/c/Users/lefty/OneDrive/todo.txt/readme.txt | grep "* @"'
 # Local dirp configuration 
 
 DIRP_PROJECTS_DIR="$HOME/dirlists/leftygray/"
-
