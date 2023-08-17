@@ -272,6 +272,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\W' adds the name of the current directory
 # export PS1="$Red \u $Green\$(__git_ps1)$Yellow \W $ $Color_Off"
 
+# Set-up editor variable
+export EDITOR=/usr/bin/vim
+
 # Setup Display for Xming
 export DISPLAY=:0
 
