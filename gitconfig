@@ -25,7 +25,9 @@ lg3 = !"git lg3-specific --all"
 	useHttpPath = true
 [credential]
 	credentialStore = cache
-    helper = store
+#    helper = store
+#	helper = 
+	helper = /usr/local/bin/git-credential-manager
 # helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 [push]
 	default = simple
