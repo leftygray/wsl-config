@@ -158,6 +158,7 @@ alias cth='clear; todo.sh ls @home'
 alias tnow='todo.sh setdue today'
 alias tsd='todo.sh setdue'
 alias tweek='todo.sh due 7'
+alias te='todo.sh edit'
 
 ###############################################################################
 # Local workstation specific variables and aliases
