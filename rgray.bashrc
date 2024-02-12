@@ -60,3 +60,7 @@ DIRP_PROJECTS_DIR="$HOME/dirlists/rgray/"
 #DIRP_USEALIASES_SUITE=true
 #DIRP_USEALIASES_DIRNUMS=true
 
+# Local Windows scrcpy aliases
+# Scrcpy windows install: https://github.com/Genymobile/scrcpy
+alias wscrcpy='/mnt/c/Users/rgray/OneDrive/WindowsApps/Scrcpy/scrcpy.exe --no-audio'
+#export ADB=/mnt/c/Users/rgray/OneDrive/WindowsApps/Scrcpy/
