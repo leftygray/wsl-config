@@ -36,3 +36,8 @@ alias tlcon='cat /mnt/c/Users/lefty/OneDrive/todo.txt/readme.txt | grep "* @"'
 # Local dirp configuration 
 
 DIRP_PROJECTS_DIR="$HOME/dirlists/leftygray/"
+
+# Local Windows scrcpy aliases
+# Scrcpy windows install: https:/github.com/Genymobile/scrcpy
+alias wscrcpy='/mnt/c/Users/lefty/OneDrive/WindowsApps/Scrcpy/scrcpy.exe --no-audio'
+
