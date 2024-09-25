@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Simple script to set-up template grant application directories and files. Used for work
+# when starting a grant application. 
+
+echo "Setting up application folder..."
+
+mkdir ./admin
+mkdir ./misc
+mkdir ./compliance
+mkdir ./cv_stuff
+mkdir ./drafts_feedback
+mkdir ./scheme_info
+mkdir ./submission
+
+touch ./README.md
+touch ./grant_notes.md
+touch ./grant_Document.docx
+touch ./grant_Materials.pptx
+
+ls -1hF --color=tty

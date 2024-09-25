@@ -121,8 +121,9 @@ alias ex='cmd.exe /c start .' #'star t.'   #Open explorer in current directory
 alias o='cmd.exe /c start'
 #alias edit='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
 #alias pdftk='/c/Program\ Files\ \(x86\)/PDFtk\ Server/bin/pdftk.exe'
-alias edit='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
-alias gvim='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
+#alias edit='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
+#alias gvim='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
+alias edit='code'
 
 # Key bindings, up/down arrow searches through history
 bind '"\e[A": history-search-backward'
@@ -287,3 +288,18 @@ export DISPLAY=:0
 [[ -f ~/wsl-config/bin/bash-preexec.sh ]] && source ~/wsl-config/bin/bash-preexec.sh
 
 
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/rgray/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/rgray/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
