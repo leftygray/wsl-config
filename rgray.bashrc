@@ -23,6 +23,8 @@ alias codp='cd /mnt/c/Users/rgray/OneDrive/'
 alias codu='cd /mnt/c/Users/rgray/OneDrive\ -\ UNSW/'
 alias cunsw='cd /mnt/c/Users/rgray/UNSW/'
 
+
+# need "$var" for paths with spaces otherwise cd etc won't work. 
 wh=/mnt/c/Users/rgray/
 wd=/mnt/c/Users/rgray/Desktop/
 wi=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/Inbox/

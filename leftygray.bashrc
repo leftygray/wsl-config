@@ -18,6 +18,7 @@ alias cwdl='cd /mnt/c/Users/lefty/Downloads/'
 alias cwork='cd /mnt/c/Users/lefty/OneDrive\ -\ UNSW/'
 alias cunsw='cd /mnt/c/Users/lefty/UNSW/'
 
+# Need to "$var" to handle spaces in paths for cd etc to work
 wh=/mnt/c/Users/lefty/
 wi=/mnt/c/Users/lefty/Desktop/Inbox/
 wdoc=/mnt/c/Users/lefty/Documents/
