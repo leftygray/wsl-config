@@ -42,6 +42,8 @@ alias grep='grep --color'                     # show differences in colour
 # alias fgrep='fgrep --color=auto'              # show differences in colour
 alias clr='clear'
 
+alias dfri='(date --date="this Friday" +"%Y-%m-%d")'
+
 # Convert all files in a directory from CRLF (dos) to LF (unix) for use in wsl
 alias d2u='find . -type f -print0 | xargs -0 dos2unix'
 
@@ -157,6 +159,7 @@ alias ct='clear; todo.sh'
 alias ctw='clear; todo.sh ls @work'
 alias cth='clear; todo.sh ls @home'
 alias tnow='todo.sh setdue today'
+alias tfri='todo.sh setdue $(date --date="this Friday" +"%Y-%m-%d")'
 alias tsd='todo.sh setdue'
 alias tweek='todo.sh due 7'
 alias te='todo.sh edit'
