@@ -149,15 +149,15 @@ alias t='todo.sh -at'
 complete -F _todo t
 alias ta='todo.sh -at add'
 alias tat='todo.sh -a addto'
-alias tw='todo.sh ls @work'
+# All work list
+alias twa='todo.sh ls @work'
+# Current work todo list
+alias tw="todo.sh ls -'\(\*\)' @work"
 alias twp='todo.sh lsp @work'
 alias th='todo.sh ls @home'
 alias tcd='eval "$(todo.sh cd)"'
 alias tls='todo.sh listfiles'
 alias tmeet='todo.sh addto meetings.txt'
-alias ct='clear; todo.sh'
-alias ctw='clear; todo.sh ls @work'
-alias cth='clear; todo.sh ls @home'
 alias tnow='todo.sh setdue today'
 alias tfri='todo.sh setdue $(date --date="this Friday" +"%Y-%m-%d")'
 alias tsd='todo.sh setdue'
