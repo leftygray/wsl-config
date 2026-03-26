@@ -2,7 +2,7 @@
 # Local aliases for personal computer
 #
 # Stored in ~/wsl-config and called by ~/.bashrc
-
+#
 # List all my local aliases
 alias akal='cat ~/wsl-config/leftygray.bashrc | grep alias'
 
