@@ -37,7 +37,7 @@ dpu() {
 	# $2: project number
 	
 	# dir=($(eval echo ~$1))
-	# sed -i '1i$dir\n'  ~/dirlists/rgray/"$2"
+	# sed -i '1i$dir\n'  ~/dirlists/z3241215/"$2"
     #dp $2
 	#echo $dir
 	#dirpu $dir

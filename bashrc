@@ -16,7 +16,7 @@
 # application.  To override the alias instruction use a \ before, ie
 # \rm will call the real rm not the alias.
 
-preexec() { clear;}
+# preexec() { clear;} # need to make sure bin -> wsl-config/bin/bash-preexec.sh is working 
 
 # getfile() { mv $1 ./;}
 
@@ -171,8 +171,8 @@ if [ $HOSTNAME = "lefty9000" ]; then
 	source ~/wsl-config/leftygray.bashrc
 fi
 
-if [ $HOSTNAME = "KIDL9520-5" ]; then 
-	source ~/wsl-config/rgray.bashrc
+if [ $HOSTNAME = "LeftyWork" ]; then 
+	source ~/wsl-config/z3241215.bashrc
 fi
 
 # Aliases using local variables

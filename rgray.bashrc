@@ -38,7 +38,7 @@ odu=/mnt/c/Users/rgray/OneDrive\ -\ UNSW/
 unsw=/mnt/c/Users/rgray/UNSW/
 
 # Opening stuff and launching program aliases
-alias keepass='/mnt/c/Users/rgray/OneDrive/WindowsApps/KeePass/KeePass-2.52/KeePass.exe'
+alias keepass='/mnt/c/Users/rgray/OneDrive/WindowsApps/KeePass/KeePass-2.61.1/KeePass.exe'
 alias ruler='/mnt/c/Users/rgray/OneDrive/WindowsApps/Ruler.exe'
 
 alias rstudio='/mnt/c/Program\ Files/RStudio/bin/rstudio.exe'

@@ -8,6 +8,11 @@ fi
 if [ $HOSTNAME = "KIDL9520-5" ]; then 
 	export TODO_DIR="/mnt/c/Users/rgray/OneDrive/todo.txt"
 fi
+
+if [ $HOSTNAME = "LeftyWork" ]; then
+    export TODO_DIR="/mnt/c/Users/z3241215/OneDrive/todo.txt"
+fi
+
 #export TODO_DIR=$(dirname "$0")
 
 # Your todo/done/report.txt locations
