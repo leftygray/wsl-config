@@ -167,7 +167,7 @@ alias te='todo.sh edit'
 ###############################################################################
 # Local workstation specific variables and aliases
 
-if [ $HOSTNAME = "lefty9000" ]; then 
+if [ $HOSTNAME = "lefty2226" ]; then 
 	source ~/wsl-config/leftygray.bashrc
 fi
 

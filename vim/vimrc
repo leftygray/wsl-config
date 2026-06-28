@@ -2,12 +2,6 @@
 " My Vim profile
 """"""""""""""""
 
-" In case Vundle install doesn't work for dracula colourscheme
-" https://draculatheme.com/vim
-"packadd! dracula
-"syntax enable
-"colorscheme dracula
-
 """"""""""""""""""""""""""""
 " Plugin set-up using Vundle
 """"""""""""""""""""""""""""
@@ -147,6 +141,10 @@ if (empty($TMUX))
   endif
 endif
 
+" In case Vundle install doesn't work for dracula colourscheme
+" https://draculatheme.com/vim
+packadd! dracula 
+syntax enable
 colorscheme dracula
 "colorscheme gruvbox
 "colorscheme onedarkvim

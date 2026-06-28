@@ -1,8 +1,8 @@
 # === EDIT FILE LOCATIONS BELOW ===
 
 # Your todo.txt directory (this should be an absolute path)
-if [ $HOSTNAME = "lefty9000" ]; then 
-	export TODO_DIR="/mnt/c/Users/lefty/OneDrive/todo.txt"
+if [ $HOSTNAME = "lefty2226" ]; then 
+	export TODO_DIR="/mnt/c/Users/leftygray/OneDrive/todo.txt"
 fi
 
 if [ $HOSTNAME = "KIDL9520-5" ]; then 
