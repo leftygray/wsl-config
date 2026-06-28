@@ -4,7 +4,7 @@
 # Stored in ~/wsl-config and called by ~/.bashrc
 
 # List all my local aliases
-alias akal='cat ~/wsl-config/rgray.bashrc | grep alias'
+alias akal='cat ~/wsl-config/z3241215.bashrc | grep alias'
 
 # Managing inbox files
 #alias lsib='ls /mnt/c/Users/z3241215/OneDrive\ -\ UNSW/Inbox/'
