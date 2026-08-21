@@ -121,10 +121,6 @@ shopt -s direxpand
 
 alias ex='cmd.exe /c start .' #'star t.'   #Open explorer in current directory
 alias o='cmd.exe /c start'
-#alias edit='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
-#alias pdftk='/c/Program\ Files\ \(x86\)/PDFtk\ Server/bin/pdftk.exe'
-#alias edit='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
-#alias gvim='/mnt/c/Program\ Files\ \(x86\)/Vim/vim82/gvim.exe'
 alias edit='code'
 
 # Key bindings, up/down arrow searches through history
@@ -203,7 +199,8 @@ source ~/bin/leftydirp.bash
 ###############################################################################
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
 #  by Mike Stewart - http://MediaDoneRight.com
-
+#
+# https://github.com/ryanoasis/public-bash-scripts/blob/master/ultimate-git-ps0-bash-prompt.sh
 
 #  SETUP CONSTANTS
 #  Bunch-o-predefined colors.  Makes reading code easier than escape sequences.
@@ -250,8 +247,8 @@ PathFull="\W"
 NewLine="\n"
 Jobs="\j"
 
-# This PS1 snippet was adopted from code for MAC/BSD I saw from: http://allancraig.net/index.php?option=com_content&view=article&id=108:ps1-export-command-for-git&catid=45:general&Itemid=96
-# I tweaked it to work on UBUNTU 11.04 & 11.10 plus made it mo' better
+# https://github.com/ryanoasis/public-bash-scripts/blob/master/ultimate-git-ps0-bash-prompt.sh
+# This PS1 snippet was adopted from code Mike saw at: http://allancraig.net/index.php?option=com_content&view=article&id=108:ps1-export-command-for-git&catid=45:general&Itemid=96
 
 export PS1=$BPurple"\u"$Color_Off':$(git branch &>/dev/null;\
 if [ $? -eq 0 ]; then \
@@ -268,6 +265,8 @@ else \
   echo "'[$BYellow$PathShort$Color_Off]$NewLine$Color_Off[$BCyan$Time12h$Color_Off]' \$ "; \
 fi)'
 
+###################################################################################
+
 # Change command prompt — Udacity style
 #source ~/git-prompt.sh
 source /usr/lib/git-core/git-sh-prompt
@@ -283,14 +282,11 @@ export EDITOR=/usr/bin/vim
 # Setup Display for Xming
 export DISPLAY=:0
 
-###################################################################################
 # preexec set-up
 # Pull down our file from GitHub and write it to our home directory as a hidden file.
 #curl https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o ~/wsl-config/bib/bash-preexec.sh
 # Source our file at the end of our bash profile (e.g. ~/.bashrc, ~/.profile, or ~/.bash_profile)
 [[ -f ~/wsl-config/bin/bash-preexec.sh ]] && source ~/wsl-config/bin/bash-preexec.sh
-
-
 
 # >>> juliaup initialize >>>
 
