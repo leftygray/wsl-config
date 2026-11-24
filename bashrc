@@ -159,6 +159,7 @@ alias tfri='todo.sh setdue $(date --date="this Friday" +"%Y-%m-%d")'
 alias tsd='todo.sh setdue'
 alias tweek='todo.sh due 7'
 alias te='todo.sh edit'
+alias ctw="clear; todo.sh ls -'\(\*\)' @work"
 
 ###############################################################################
 # Local workstation specific variables and aliases
@@ -267,7 +268,7 @@ fi)'
 
 ###################################################################################
 
-# Change command prompt — Udacity style
+# Change command prompt ï¿½ Udacity style
 #source ~/git-prompt.sh
 source /usr/lib/git-core/git-sh-prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
