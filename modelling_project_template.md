@@ -1,6 +1,6 @@
 <!--
 Written by: Claude (Claude Opus 5.5), 24/11/2026; revised 25/11/2026 (several times)
-Validated by:
+Validated by: Richard T. Gray
 -->
 
 # Modelling project template
