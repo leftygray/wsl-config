@@ -1,7 +1,19 @@
-# We'll let Git's auto-detection algorithm infer if a file is text. If it is,
-# enforce LF line endings regardless of OS or git configurations.
+# Line endings
+# Store text files with LF line endings in the repository and check them out
+# with LF on every machine (Windows and Linux/WSL alike). Git ignores
+# line-ending differences when comparing text files.
 * text=auto eol=lf
 
-# Isolate binary files in case the auto-detection algorithm fails and
-# marks them as text files (which could brick them).
-*.{png,jpg,jpeg,gif,webp,woff,woff2} binary
+# Exception: csv files are checked out with CRLF line endings so they open and
+# save cleanly in Microsoft Excel. They are still stored with LF in the
+# repository.
+*.csv text eol=crlf
+
+# Binary files: never convert line endings or show text diffs
+*.docx  binary
+*.pptx  binary
+*.xlsx  binary
+*.pdf   binary
+*.png   binary
+*.rds   binary
+*.RData binary

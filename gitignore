@@ -39,7 +39,7 @@ Thumbs.db
 # Rstudio files #
 #################
 *.Rhistory
-*.Rdata
+*.RData
 
 #########################################
 # Local files to ignore
