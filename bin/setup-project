@@ -1,24 +1,244 @@
 #!/bin/bash
+#
+# Written by: Claude (Claude Opus 5.5), 25/11/2026, based on the user's original
+#             setup-project script
+# Validated by: Richard T. Gray (leftygray)
+#
+# setup-project: set up the folders and default files for a modelling project,
+# following modelling_project_template.md.
+#
+# Usage (run from the main folder of the project):
+#   setup-project single         Single-project layout (output/ at top level)
+#   setup-project multi          Multi-project layout (projects/ and templates/)
+#   setup-project add <Name>     Add a project to projects/ in a multi-project
+#                                main folder
+#
+# The script is safe to re-run. It checks what already exists and creates only
+# what is missing. It never overwrites or deletes existing files.
+#
+# It does not initialise Git or create script files. Do those when needed.
 
-# Simple script to set-up template project directories and files. Used for work
-# when starting a modelling project. 
+set -euo pipefail
 
-echo "Setting up project..."
+# ---- Settings ---------------------------------------------------------------
 
-mkdir ./admin
-mkdir ./code
-mkdir ./data
-mkdir ./docs
-mkdir ./misc
-mkdir ./output
-mkdir ./projects
+# Folder holding the default config files
+configDir="$HOME/wsl-config"
+defaultGitignore="$configDir/gitignore"
+defaultGitattributes="$configDir/gitattributes"
+templateMd="$configDir/modelling_project_template.md"
 
-touch ./README.md
-touch ./project_notes.md
-touch ./Project_Document.docx
-touch ./Project_Materials.pptx
+# First line of the modelling block appended to .gitignore. Used to check
+# whether the block has already been added.
+gitignoreMarker="# ---- Modelling project template rules ----"
 
-cp ~/wsl-config/gitattributes ./.gitattributes
-cp ~/wsl-config/gitignore ./.gitignore
+# ---- Functions --------------------------------------------------------------
 
-ls -1hF --color=tty
+#' Create a folder if it does not already exist, and report what happened.
+#' @param $1 Path of the folder.
+MakeFolder() {
+  if [[ -d "$1" ]]; then
+    echo "  exists:  $1/"
+  else
+    mkdir -p "$1"
+    echo "  created: $1/"
+  fi
+}
+
+#' Create a file if it does not already exist. If a source file is given and
+#' exists, copy it; otherwise create an empty file.
+#' @param $1 Path of the file to create.
+#' @param $2 Optional path of a source file to copy from.
+MakeFile() {
+  local target="$1"
+  local source="${2:-}"
+  if [[ -e "$target" ]]; then
+    echo "  exists:  $target"
+  elif [[ -n "$source" && -f "$source" ]]; then
+    cp "$source" "$target"
+    echo "  copied:  $target (from $source)"
+  else
+    touch "$target"
+    echo "  created: $target (empty)"
+  fi
+}
+
+#' Copy a config file into the current folder if it is missing. Warn if the
+#' source does not exist, rather than creating an empty file.
+#' @param $1 Path of the source file.
+#' @param $2 Path of the target file.
+CopyConfig() {
+  local source="$1"
+  local target="$2"
+  if [[ -e "$target" ]]; then
+    echo "  exists:  $target"
+  elif [[ -f "$source" ]]; then
+    cp "$source" "$target"
+    echo "  copied:  $target (from $source)"
+  else
+    echo "  WARNING: $source not found, so $target was not created"
+  fi
+}
+
+#' Append the modelling rules to .gitignore, unless they are already there.
+#' The rules are taken from the ```gitignore block in the template markdown
+#' file, so the template stays the single source of these rules.
+AppendGitignoreRules() {
+  if [[ ! -f .gitignore ]]; then
+    echo "  WARNING: no .gitignore, so modelling rules were not appended"
+  elif grep -qxF "$gitignoreMarker" .gitignore; then
+    echo "  exists:  modelling rules in .gitignore"
+  elif [[ ! -f "$templateMd" ]]; then
+    echo "  WARNING: $templateMd not found, so modelling rules were not appended"
+  else
+    # Print the lines between the ```gitignore and closing ``` fences
+    { echo ""; sed -n '/^```gitignore$/,/^```$/{//!p}' "$templateMd"; } >> .gitignore
+    echo "  appended: modelling rules to .gitignore"
+  fi
+}
+
+#' Create the folders and files shared by every layout, in the current folder.
+#' @param $1 Prefix for the key files: "overall" or "project".
+#' @param $2 Optional folder holding template files to copy from.
+MakeCommonStructure() {
+  local prefix="$1"
+  local templateDir="${2:-}"
+
+  echo "Folders:"
+  MakeFolder admin
+  MakeFolder code
+  MakeFolder data
+  MakeFolder docs
+  MakeFolder misc
+  MakeFile data/.gitkeep
+
+  echo "Key files:"
+  MakeFile README.md "${templateDir:+$templateDir/README.md}"
+  MakeFile "${prefix}_notes.md" "${templateDir:+$templateDir/project_notes.md}"
+  MakeFile "${prefix}_document.docx" "${templateDir:+$templateDir/project_document.docx}"
+  MakeFile "${prefix}_materials.pptx" "${templateDir:+$templateDir/project_materials.pptx}"
+}
+
+#' Create the output folders, with .gitkeep files, in the current folder.
+MakeOutputStructure() {
+  echo "Output folders:"
+  MakeFolder output/results
+  MakeFolder output/figures
+  MakeFile output/results/.gitkeep
+  MakeFile output/figures/.gitkeep
+}
+
+#' Add the main-folder files: template, Git config files and licence.
+MakeMainFolderFiles() {
+  echo "Template and Git config files:"
+  CopyConfig "$templateMd" modelling_project_template.md
+  CopyConfig "$defaultGitattributes" .gitattributes
+  CopyConfig "$defaultGitignore" .gitignore
+  AppendGitignoreRules
+  MakeLicence
+}
+
+#' Create an MIT LICENSE file if none exists. The copyright holder is taken
+#' from the Git user name; edit the file if this is wrong.
+MakeLicence() {
+  if [[ -e LICENSE ]]; then
+    echo "  exists:  LICENSE"
+    return
+  fi
+  local holder
+  holder="$(git config user.name 2>/dev/null || true)"
+  holder="${holder:-<COPYRIGHT HOLDER>}"
+  cat > LICENSE <<EOF
+MIT License
+
+Copyright (c) $(date +%Y) $holder
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+EOF
+  echo "  created: LICENSE (MIT, copyright holder: $holder)"
+}
+
+#' Print usage and exit with an error.
+Usage() {
+  cat <<'USAGE'
+Usage (run from the main folder of the project):
+  setup-project single         Single-project layout (output/ at top level)
+  setup-project multi          Multi-project layout (projects/ and templates/)
+  setup-project add <Name>     Add a project to projects/ in a multi-project
+                               main folder
+USAGE
+  exit 1
+}
+
+# ---- Main -------------------------------------------------------------------
+
+layout="${1:-}"
+
+case "$layout" in
+  single)
+    if [[ -d projects ]]; then
+      echo "WARNING: projects/ exists here, which suggests a multi-project layout."
+      echo "Check before continuing. Stopping."
+      exit 1
+    fi
+    echo "Setting up single-project layout in $(pwd)"
+    MakeCommonStructure project
+    MakeOutputStructure
+    MakeMainFolderFiles
+    ;;
+
+  multi)
+    if [[ -d output ]]; then
+      echo "WARNING: output/ exists here, which suggests a single-project layout."
+      echo "Check before continuing. Stopping."
+      exit 1
+    fi
+    echo "Setting up multi-project layout in $(pwd)"
+    MakeCommonStructure overall
+    echo "Projects folder:"
+    MakeFolder projects/templates
+    MakeMainFolderFiles
+    echo "Next: add template files to projects/templates/, then run"
+    echo "  setup-project add <ProjectName>"
+    ;;
+
+  add)
+    projectName="${2:-}"
+    [[ -n "$projectName" ]] || Usage
+    if [[ ! -d projects ]]; then
+      echo "ERROR: no projects/ folder here. Run this from a multi-project main"
+      echo "folder, or run 'setup-project multi' first."
+      exit 1
+    fi
+    templateDir="$(pwd)/projects/templates"
+    echo "Adding project projects/$projectName"
+    MakeFolder "projects/$projectName"
+    cd "projects/$projectName"
+    MakeCommonStructure project "$templateDir"
+    MakeOutputStructure
+    echo "Next: add the project to the main README.md"
+    ;;
+
+  *)
+    Usage
+    ;;
+esac
+
+echo ""
+ls -1AhF --color=tty
