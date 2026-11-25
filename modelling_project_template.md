@@ -1,6 +1,6 @@
 <!--
 Written by: Claude (Claude Opus 5.5), 24/11/2026; revised 25/11/2026 (several times)
-Validated by: Richard T. Gray (leftygray)
+Validated by:
 -->
 
 # Modelling project template
@@ -52,7 +52,9 @@ MainFolder/
 |   |   |       |-- .gitkeep
 |   |   |-- 0-ProjectScript.R   # Numbered main scripts, run in order
 |   |   |-- 1-ProjectScript.R
+|   |   |-- CLAUDE.md           # Claude Code: imports project_instructions.md (ignored)
 |   |   |-- README.md
+|   |   |-- project_instructions.md  # Instructions for AI for this project (ignored)
 |   |   |-- project_notes.md
 |   |   |-- project_document.docx
 |   |   |-- project_materials.pptx
@@ -63,8 +65,10 @@ MainFolder/
 |-- .gitattributes
 |-- .gitignore
 |-- LICENSE                     # MIT by default
+|-- CLAUDE.md                   # Claude Code: imports this file and overall_instructions.md (ignored)
 |-- README.md                   # Overall project README
 |-- modelling_project_template.md  # This file
+|-- overall_instructions.md     # Instructions for AI for the overall project (ignored)
 |-- overall_notes.md
 |-- overall_document.docx
 |-- overall_materials.pptx
@@ -100,6 +104,8 @@ uses the `project_` prefix.
 | File | Purpose | Git |
 |---|---|---|
 | `README.md` | Description for GitHub: what the project is, how to run it, folder overview. | Tracked |
+| `CLAUDE.md` | Read automatically by Claude Code. In the main folder it imports this template and `overall_instructions.md` (or `project_instructions.md` in a single-project layout). In a project folder it imports `project_instructions.md`. | Ignored |
+| `*_instructions.md` | Project-specific instructions for AI assistants: aims, stakeholders, data sources, key decisions. General working preferences belong in the user-level `~/.claude/CLAUDE.md`, not here. | Ignored |
 | `*_notes.md` | Working notes and information, added quickly as the project progresses. | Ignored |
 | `*_document.docx` | Formal write-up: methods, parameter tables with sources, assumptions. Write it so that text can be copied into manuscripts. | Ignored |
 | `*_materials.pptx` | Sketchbook: screenshots of data and key information, each with its reference. | Ignored |
@@ -191,6 +197,8 @@ default file, so they aren't repeated here.
 
 # Working files
 *_notes.md
+*_instructions.md
+CLAUDE.md
 *_document.docx
 *_materials.pptx
 
@@ -227,7 +235,12 @@ Git cannot re-include a file if its parent folder is ignored. That's why `data/`
 
 1. Create `admin/`, `code/`, `data/` (with `.gitkeep`), `docs/` and `misc/`.
 2. Create the key files (Section 4). Use the `project_` prefix in a single-project layout and
-   the `overall_` prefix in a multi-project main folder.
+   the `overall_` prefix in a multi-project main folder. Include a `CLAUDE.md` with these
+   imports, using the matching prefix:
+   ```
+   @modelling_project_template.md
+   @overall_instructions.md
+   ```
 3. Single-project layout: create `output/results/` and `output/figures/`, each with a
    `.gitkeep`. Multi-project layout: create `projects/templates/`.
 4. Check that this file, `.gitattributes` and `.gitignore` are present, and append the
@@ -239,9 +252,11 @@ Git cannot re-include a file if its parent folder is ignored. That's why `data/`
 1. Create `projects/<ProjectName>/` with `admin/`, `code/`, `data/`, `docs/`, `misc/`,
    `output/results/` and `output/figures/`.
 2. Add `.gitkeep` to `data/`, `output/results/` and `output/figures/`.
-3. Copy the template files from `projects/templates/` (`README.md`, `project_notes.md`,
+3. Copy the template files from `projects/templates/` (`README.md`, `project_instructions.md`,
+   `project_notes.md`,
    `project_document.docx`, `project_materials.pptx`). If a template is missing, create an
-   empty file with that name.
+   empty file with that name. Create `CLAUDE.md` containing `@project_instructions.md`.
+   Claude Code also loads the main folder's `CLAUDE.md`, so don't import the template again.
 4. Create `0-<ScriptName>.R` (or `.Rmd`) as the first script.
 5. Add the project to the main `README.md`.
 
@@ -254,7 +269,8 @@ Git cannot re-include a file if its parent folder is ignored. That's why `data/`
 - Put reusable functions in `code/` (with Roxygen documentation) and keep main scripts as
   thin as possible: they should mostly call functions.
 - Use relative paths from the project folder. Never use absolute paths tied to one computer.
-- Don't add ignored working files (`*_notes.md`, `.docx`, `.pptx`) to Git, and don't change
+- Don't add ignored working files (`CLAUDE.md`, `*_instructions.md`, `*_notes.md`, `.docx`,
+  `.pptx`) to Git, and don't change
   `.gitignore` without approval.
 - Every parameter value must trace to a source, calculation or stated assumption (Section 6).
   Never invent or guess a value without flagging it clearly.

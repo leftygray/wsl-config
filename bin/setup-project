@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Written by: Claude (Claude Opus 5.5), 25/11/2026, based on the user's original
+# Written by: Claude (Claude Opus 5.5), 25/11/2026 (revised same day), based on the user's original
 #             setup-project script
-# Validated by: Richard T. Gray (leftygray)
+# Validated by:
 #
 # setup-project: set up the folders and default files for a modelling project,
 # following modelling_project_template.md.
@@ -114,9 +114,25 @@ MakeCommonStructure() {
 
   echo "Key files:"
   MakeFile README.md "${templateDir:+$templateDir/README.md}"
+  MakeFile "${prefix}_instructions.md" "${templateDir:+$templateDir/project_instructions.md}"
   MakeFile "${prefix}_notes.md" "${templateDir:+$templateDir/project_notes.md}"
   MakeFile "${prefix}_document.docx" "${templateDir:+$templateDir/project_document.docx}"
   MakeFile "${prefix}_materials.pptx" "${templateDir:+$templateDir/project_materials.pptx}"
+}
+
+#' Create a CLAUDE.md that imports the given files, if none exists.
+#' Claude Code reads CLAUDE.md automatically and loads each @-imported file.
+#' @param $@ Names of the files to import, relative to the current folder.
+MakeClaudeMd() {
+  if [[ -e CLAUDE.md ]]; then
+    echo "  exists:  CLAUDE.md"
+    return
+  fi
+  local file
+  for file in "$@"; do
+    echo "@$file"
+  done > CLAUDE.md
+  echo "  created: CLAUDE.md (imports: $*)"
 }
 
 #' Create the output folders, with .gitkeep files, in the current folder.
@@ -199,6 +215,7 @@ case "$layout" in
     fi
     echo "Setting up single-project layout in $(pwd)"
     MakeCommonStructure project
+    MakeClaudeMd modelling_project_template.md project_instructions.md
     MakeOutputStructure
     MakeMainFolderFiles
     ;;
@@ -211,6 +228,7 @@ case "$layout" in
     fi
     echo "Setting up multi-project layout in $(pwd)"
     MakeCommonStructure overall
+    MakeClaudeMd modelling_project_template.md overall_instructions.md
     echo "Projects folder:"
     MakeFolder projects/templates
     MakeMainFolderFiles
@@ -231,6 +249,7 @@ case "$layout" in
     MakeFolder "projects/$projectName"
     cd "projects/$projectName"
     MakeCommonStructure project "$templateDir"
+    MakeClaudeMd project_instructions.md
     MakeOutputStructure
     echo "Next: add the project to the main README.md"
     ;;
